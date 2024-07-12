@@ -5,16 +5,12 @@ class Solution:
             left = nums[:i]
             right = nums[i:]
 
-            nums = right + left
+            arr = right + left
 
-            result = self.CheckSort(nums)
+            result = self.CheckSort(arr)
             if result == True:
                 return True
         return False        
-
-
-
-    
 
     def CheckSort(self, nums):
         sort = True
