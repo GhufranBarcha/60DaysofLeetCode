@@ -3,7 +3,7 @@ class Solution:
         """
         Do not return anything, modify nums in-place instead.
         """
-        if len(nums) > 1 and k > len(nums):
+        if len(nums) == 2 and k > len(nums):
             nums[0] ,nums[1]=nums[1],nums[0]
         else:    
             mid = len(nums) - k
