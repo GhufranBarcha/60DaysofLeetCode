@@ -6,16 +6,8 @@ class Solution:
 
         for i in range(len(nums)):
             if nums[i] == 1:
-                cons +=1
+                cons += 1
+                max_c = max(cons , max_c)
             else:
-                if cons > max_c:
-                    max_c = cons
                 cons = 0
-
-        if cons > max_c:
-                max_c = cons        
         return max_c
-                            
-
-
-        
