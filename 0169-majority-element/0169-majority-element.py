@@ -1,12 +1,12 @@
 class Solution:
     def majorityElement(self, nums: List[int]) -> int:
 
-        ## Brute force approch 
-        ## just sort the array and find the middle point
+        # ## Brute force approch 
+        # ## just sort the array and find the middle point
 
-        nums.sort()
-        n = nums[len(nums)//2]
-        return n
+        # nums.sort()
+        # n = nums[len(nums)//2]
+        # return n
 
         ## Boyer-Moore Majority voting algorith
 
@@ -16,28 +16,12 @@ class Solution:
         for num in nums:
             if count == 0:
                 n = num
-            elif n != num:
-                count -=1   
+            elif num == n:
+                count +=1 
+            else:
+                count -=1      
 
         return n        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
         # count = 0
