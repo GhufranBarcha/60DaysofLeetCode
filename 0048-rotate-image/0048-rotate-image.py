@@ -10,6 +10,6 @@ class Solution:
                 
         for i in range(l):
             for j in range(1):
-                matrix[i][:] = matrix[i][::-1]        
+                matrix[i].reverse()        
 
         
