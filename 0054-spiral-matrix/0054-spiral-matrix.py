@@ -11,9 +11,11 @@ class Solution:
 
         # Create an array to store the elements in spiral order
         result = []
+        num = rows * cols
+
 
         # Traverse the matrix in a spiral order
-        while rows > 0 and cols > 0:
+        while len(result) < num :
             # Move horizontally in one of two directions:
             #   1. Left to right (if direction == 1)
             #   2. Right to left (if direction == -1)
