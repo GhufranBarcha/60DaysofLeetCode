@@ -1,4 +1,3 @@
-from collections import Counter
 class Solution:
     def beautySum(self, s: str) -> int:
         res = 0
