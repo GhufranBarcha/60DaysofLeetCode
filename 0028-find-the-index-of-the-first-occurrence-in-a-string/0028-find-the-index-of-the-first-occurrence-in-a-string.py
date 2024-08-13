@@ -4,7 +4,6 @@ class Solution:
         l = len(needle)
         for i in range(len(haystack)):
             if needle == haystack[i:i+l] and (i+l) <= len(haystack):
-                output = i
-                break
-        return output        
+                return i
+        return -1        
         
