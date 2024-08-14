@@ -1,26 +1,17 @@
 class Solution:
     def plusOne(self, digits: List[int]) -> List[int]:
-
         i = len(digits) - 1
-        for i in range(len(digits)-1 , -1 ,-1):
+
+        while i >= 0:
             if digits[i] != 9:
                 digits[i] += 1
-                break
-            elif digits[i] == 9:
-                digits[i] == 0
-            elif digits[i] == 9 and i == 0:
-                digits[i] == 1
-                digits.append(0)
-
-        if len(digits) == 1:
-            if digits[0] == 9:
-                digits[0] = 1
-                digits.append(0)
+                return digits
             else:
-                digits[0] += 1    
-        return digits        
-        
+                digits[i] = 0
+            i -= 1
 
+        # If the loop completes, that means all digits were 9
+        return [1] + digits
 
         ## First approch
         # num = int("".join(map(str,digits))) + 1
