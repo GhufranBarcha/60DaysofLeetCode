@@ -4,7 +4,7 @@ class Solution:
             return 0
         maxV = 1
         for i in range(0 ,x//2 + 1):
-            if i**2 <= x:
+            if (i*i) <= x:
                 maxV= max(i , maxV)
             else:
                 break
