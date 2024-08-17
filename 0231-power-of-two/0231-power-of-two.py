@@ -1,13 +1,8 @@
+import math
 class Solution(object):
     def isPowerOfTwo(self, n):
         """
         :type n: int
         :rtype: bool
         """
-     
-        num = int(n ** 0.5)
-        if (num ** 2) == n:
-            return True
-        else:
-            return False    
-        
+        return n > 0 and (n & (n-1)) == 0   
