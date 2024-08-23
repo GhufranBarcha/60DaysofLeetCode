@@ -14,15 +14,22 @@ class Solution(object):
         while temp.next:
             temp = temp.next
             middle += 1
-        if middle == 2:
-            head.next = None
-            return head  
+        temp = head    
+        if middle == 3:
+            temp.next = temp.next.next
 
+        if middle == 2:
+            temp.next = None
+            return head        
+ 
         if middle == 1:
             return None
-        middle  = middle//2   
+        middle  = middle//2  
 
-        temp = head
+        temp = head 
+  
+      
+        
 
         for i in range(1 , middle):
             temp = temp.next
