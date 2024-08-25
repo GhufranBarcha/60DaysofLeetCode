@@ -11,7 +11,9 @@ class Solution(object):
         """
 
         if not head:
-            return None  
+            return None
+        if head.next == None and head:
+            return True      
         arr = []    
         temp = head
         arr.append(temp.val)
