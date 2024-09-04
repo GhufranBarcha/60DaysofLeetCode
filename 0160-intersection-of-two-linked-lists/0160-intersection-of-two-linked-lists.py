@@ -36,7 +36,8 @@ class Solution(object):
             count = count1 - count2
             for _ in range(count):
                 temp1 = temp1.next
-
+        if temp1 == temp2:
+                return temp1
         while temp1 and temp1.next:
             temp1 = temp1.next
             temp2 = temp2.next
