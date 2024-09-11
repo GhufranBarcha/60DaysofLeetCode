@@ -11,19 +11,19 @@ class Solution:
 
         for i in range(1,len(s)+1):
             try:
-               result = int(s[0:i])
+                if start != None:
+                    result = int(start + s[0:i])
+                else:
+                    result = int(s[0:i])
                
             except:
                 break
+        if result < -2**31 and start != None:
+                result = -2**31
+                return result  
         if result > 2**31 - 1:
-            result = 2**31        
-
-        if start != None:
-            if start == "-":
-                result = -1 * result
-                return result
-            else:
-                return result
+                result = 2**31 - 1
+                return result              
         return result        
 
      
